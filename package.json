@@ -1,0 +1,38 @@
+{
+  "name": "lucipher-browserify",
+  "version": "1.0.0",
+  "description": "LUCipher, Let Us Cipher - Browserify version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "manufosela",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "Buffer": "0.0.0",
+    "crypto-browserify": "^3.12.0",
+    "pbkdf2": "^3.0.17",
+    "lucipher": "^1.0.3"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-stage-0": "^7.8.3",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
+  }
+}

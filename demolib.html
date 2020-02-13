@@ -1,0 +1,24 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Lib</title>
+</head>
+
+<body>
+  <script>
+    window.onload = function(e) {
+      let LUC = new LUCipher('mipassword', 'misalt');
+      let code = LUC.cipher('Este es el texto a codificar');
+      console.log('SIN CODIFICAR: Este es el texto a codificar');
+      console.log('CODIFICADO: ', code);
+      console.log('\n-------------------------------------\n');
+      let decode = LUC.desCipher(code);
+      console.log(decode);
+    }
+  </script>
+  <script type="text/javascript" src="../lu.min.js"></script>
+</body>
+
+</html>
